@@ -54,6 +54,7 @@ nnoremap <c-k> :YcmCompleter GoToDeclaration<CR>|
 nnoremap <c-h> :YcmCompleter GoToDefinition<CR>|
 nnoremap <c-j> :YcmCompleter GoToDefinitionElseDeclaration<CR>|
 " 停止提示是否载入本地ycm_extra_conf文件
+set completeopt=menu,menuone
 let g:ycm_confirm_extra_conf = 0
 " 语法关键字补全
 let g:ycm_seed_identifiers_with_syntax = 1
@@ -75,8 +76,10 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 "let g:ycm_key_invoke_completion = ['<C-Space>']
 " 停止显示补全列表(防止列表影响视野), 可以按<C-Space>重新弹出
 "let g:ycm_key_list_stop_completion = ['<C-y>']
+let g:ycm_add_preview_to_completeopt = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_show_diagnostics_ui = 0
 let g:ycm_semantic_triggers =  {
 \   'c,cpp,python,java,go,erlang,perl':['re!\w{2}'],
 \   'cs,lua,javascript':['re!\w{2}'],
